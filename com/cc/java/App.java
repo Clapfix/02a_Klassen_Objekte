@@ -3,23 +3,31 @@ package com.cc.java;
 public class App {
     
     public static void main(String[] args) {
-
-        Cat cat1 = new Cat("Grizabella","white",29);
-        cat1.tellYourName();
-        cat1.tellYourFurColor();
-        cat1.tellYorAge();
-
-        System.out.println("------------------");
-
-        Cat cat2 = new Cat("Alonzo","grey",35);
-        cat2.tellYourName();
-        cat2.tellYourFurColor();
-        cat2.tellYorAge();
     
+        /** Typkonvertierung  */
+        // output(String.valueOf(2));  // int --> String
+        // output(Integer.toString(2)); // int --> String
+        // output("Das ist eine Ziffer: " + 2); // int --> String
+
+        Cat cat1 = new Cat("Grizabella", "white", 29);
+        output("Name: " + cat1.getName());
+        output("Fellfarbe " + cat1.getFurColor());
+        output("Alter: " + cat1.getAge());
+
+        output("-------------");
+
+        Cat cat2 = new Cat("Alonzo", "grey", 35);
+
+        cat2.setName("Rumple Teaser");
+
+        output("Name: " + cat2.getName());
+        output("Fellfarbe " + cat2.getFurColor());
+        output("Alter: " + cat2.getAge());
+        
+    }
+
+    public static void output(String outputStr) {
+        System.out.println(outputStr);
     }
 
 }
-
-// Cat --> Referenztyp / reference type
-        // cat --> Referenzvariable / reference variable
-        // new Cat() --> Call des default-Konstruktors

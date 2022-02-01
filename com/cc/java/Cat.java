@@ -1,28 +1,53 @@
 package com.cc.java;
 
 public class Cat {
+    
+    private String name;
+    private String furColor;
+    private int age;
 
-    public String name;
-    public String furColor;
-    public int age;
-
-    Cat (String name, String furColor, int age){
+    public Cat(String name, String furColor, int age) {
         this.name = name;
         this.furColor = furColor;
         this.age = age;
     }
 
+    /** Getter */
 
-
-    public void tellYourName(){
-        System.out.println(this.name);
+    public String getName() {
+        if (getPermission()) {
+           return this.name; 
+        } else {
+            return "Sorry, no permission!";
+        }
     }
 
-    public void tellYourFurColor() {
-        System.out.println(this.furColor);
+    public String getFurColor() {
+        return furColor;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    /** Setter */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFurColor(String furColor) {
+        this.furColor = furColor;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     
-    public void tellYorAge() {
-        System.out.println(this.age);       
+    private boolean getPermission(){
+        return true;
     }
+
+
 }
